@@ -1,0 +1,104 @@
+/* The little circle thingies idk what to call them */
+#theme-switcher-form div:nth-child(1) label {
+  background-color: #eee;
+}
+#theme-switcher-form div:nth-child(2) label {
+  background-color: #353535;
+}
+#theme-switcher-form div:nth-child(3) label {
+  background-color: #813151;
+}
+
+/* Theme styling, oh boy */
+
+/* light mode always looks bad, no matter how good the dev :P */
+html[data-theme="light"] {
+  --bg-primary: white;
+  --bg-secondary: #DDD;
+  --text-primary: #111;
+}
+
+html[data-theme="dark"] {
+  --bg-primary: #111;
+  --bg-secondary: #1b1b1b;
+  --text-primary: #eee;
+}
+
+html[data-theme="crimson"] {
+  --bg-primary: #331320;
+  --bg-secondary: #4d1d31;
+  --text-primary: #eee;
+}
+
+
+/* crappy css below, but check the result before you murder me */
+
+#theme-switcher-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90px; /* Adjust the width as needed */
+  margin: auto; /* Center form */
+}
+
+#theme-switcher-form div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#theme-switcher-form input[type="radio"] {
+  display: none;
+  outline: 1px solid var(--fg-secondary);
+}
+
+#theme-switcher-form label {
+  width: 25px;
+  height: 25px;
+  background: #cc96ee; /* Default background no one's ever going to see */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#theme-switcher-form input[type="radio"]:checked + label {
+  outline: 2px solid var(--text-primary);
+  /* don't ask why I used that variable here */
+}
+
+
+@media only screen and (max-width: 422px) {
+  .footer {
+    text-align: center
+  }
+  
+  .footer * {
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .dark-mode-toggle-container {
+    margin-top: 12px;
+  }
+} /* smol screens */
+
+@media only screen and (min-width: 423px) {
+  .footer {
+    text-align: right
+  }
+
+  .footer * {
+    display: inline-block;
+  }
+
+  .dark-mode-toggle-container {
+    float: left;
+    margin-top: 13px;
+    margin-left: 12px;
+  }
+  
+  /*#theme-switcher-form {
+    width: 90px;
+  }*/
+  
+} /* bigger screens */

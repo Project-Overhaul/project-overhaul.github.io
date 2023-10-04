@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>Project Overhaul | Home</title>
-      <link rel="stylesheet" href="style.css">
-      </head> 
-   <body>
-      <header>   
-      <h1>Welcome to Project Overhaul!</h1>
-      <nav>
-        <p>Hi.</p>
-      </nav>
-      </header>
-      <main>
-      <footer>
-         <p>© Project Overhaul, 2023.</p>
-      </footer>
-    </body>
+  <head>
+    <title>Project Overhaul | Home</title>
+    <link rel="stylesheet" href="themes.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/@hungrybluedev/theme-switcher@latest/dist/switch.js" type="module" defer></script>
+    <!-- html comments are a pain in the ass so figure this code out yourself !-->
+  </head> 
+  <body>
+    <h2>Welcome to</h2>
+    <h1>Project Overhaul</h1>
+    <div class="footer">
+          <div class="dark-mode-toggle-container">
+                <form id="theme-switcher-form">
+        <div>
+          <input
+            type="radio"
+            id="light-theme"
+            name="theme-choice"
+            value="light-theme"
+            selected="selected"
+          />
+        <label for="light-theme"></label>
+        </div>
+
+        <div>
+          <input
+            type="radio"
+            id="dark-theme"
+            name="theme-choice"
+            value="dark-theme"
+          />
+          <label for="dark-theme"></label>
+        </div>
+        <div>
+          <input
+            type="radio"
+            id="crimson-theme"
+            name="theme-choice"
+            value="crimson-theme"
+          />
+          <label for="crimson-theme"></label>
+        </div>
+      </form>
+            </div>
+            <p>© Copyright 2023 Project Overhaul</a></p>
+        </div>
+  </body>
 </html>
