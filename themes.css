@@ -10,11 +10,16 @@
 }
 /* Theme styling, oh boy */
 
+
 /* light mode always looks bad, no matter how good the dev :P */
-html[data-theme="light"] {
+
+
+/* light mode/fallback colours */
+html {
   --bg-primary: white;
   --bg-secondary: #DDD;
   --text-primary: #111;
+  --link-color: #2323b8;
 }
 
 html[data-theme="neutral"] {
@@ -24,9 +29,10 @@ html[data-theme="neutral"] {
 }
 
 html[data-theme="dark"] {
-  --bg-primary: #111;
-  --bg-secondary: #1b1b1b;
+  --bg-primary: #1f1f1f;
+  --bg-secondary: #282828;
   --text-primary: #eee;
+  --link-color: #6091e2;
 }
 
 

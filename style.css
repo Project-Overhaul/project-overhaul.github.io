@@ -10,7 +10,9 @@ html, body {
   text-align: center; /* Why do I have a bad feeling about this? */
 }
 
-
+a {
+  color: var(--link-color);
+}
 
 .footer {
   position: fixed;
