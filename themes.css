@@ -3,12 +3,11 @@
   background-color: #eee;
 }
 #theme-switcher-form div:nth-child(2) label {
-  background-color: #353535;
-}
-#theme-switcher-form div:nth-child(3) label {
   background-color: #888;
 }
-
+#theme-switcher-form div:nth-child(3) label {
+  background-color: #353535;
+}
 /* Theme styling, oh boy */
 
 /* light mode always looks bad, no matter how good the dev :P */
@@ -37,7 +36,7 @@ html[data-theme="dark"] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 120px; /* Adjust the width as needed */
+  width: 100px; /* Adjust the width as needed */
   margin: auto; /* Center form */
 }
 
