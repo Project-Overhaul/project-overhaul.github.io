@@ -8,6 +8,9 @@
 #theme-switcher-form div:nth-child(3) label {
   background-color: #813151;
 }
+#theme-switcher-form div:nth-child(4) label {
+  background-color: #888;
+}
 
 /* Theme styling, oh boy */
 
