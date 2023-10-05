@@ -7,7 +7,10 @@ html, body {
 }
 
 * {
-  text-align: center; /* Why do I have a bad feeling about this? */
+  text-align: center;
+  -webkit-box-sizing: border-box;
+	box-sizing: border-box;
+  /* ^ delete this and I will hunt you down */
 }
 
 a {

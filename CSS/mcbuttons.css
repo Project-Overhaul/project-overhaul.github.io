@@ -1,0 +1,142 @@
+.mc-button[data-color="green"] {
+  --button-color-01: var(--green-vanilla-01);
+  --button-color-02: var(--green-vanilla-02);
+  --button-color-03: var(--green-vanilla-03);
+}
+
+.mc-button[data-color="red"] {
+  --button-color-01: var(--mc-dungeons-red-5);
+  --button-color-02: var(--mc-dungeons-red-6);
+  --button-color-03: var(--mc-dungeons-red-4);
+}
+
+
+
+
+
+/* End of pretty css */
+
+@import url('https://fonts.cdnfonts.com/css/noto-sans');
+
+.mc-button {
+  --button-bg: linear-gradient(0deg, var(--black-A26), var(--black-A26)), var(--button-color-01);
+  --button-txtshadow: 0px 2px 0px var(--button-color-02);
+  --button-shadow: inset 0 4px var(--button-color-03), inset 0 -4px var(--button-color-02), 0 4px var(--black-A40);
+  border: none;
+  font-size: 1.125rem;
+  line-height: 20px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.25s, opacity 0.75s 0.5s;
+  font-family: "Noto Sans", sans-serif;
+  color: #202020;
+  padding: 0;
+  position: relative;
+  outline: 0;
+}
+
+.mc-button .mcbtn_text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  min-width: 9.3rem;
+  height: 3.125rem;
+  border-width: 0 0 0.25rem;
+  background: var(--button-color-01);
+  border: 0.125rem solid var(--black-02);
+  font-family: "Noto Sans", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
+  color: var(--white-01);
+  letter-spacing: 0.03rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  pointer-events: all;
+  margin: 0;
+  outline: 0;
+  text-shadow: var(--button-txtshadow);
+  box-shadow: var(--button-shadow);
+}
+
+.mc-button .mcbtn_text::after,
+.mc-button .mcbtn_text::before {
+  content: "";
+  position: absolute;
+  background: var(--button-color-02);
+  height: 2.625rem;
+  width: 0.25rem;
+  bottom: 0.05rem;
+  border-width: 0 0 0.25rem;
+  border-bottom: 0.125rem solid var(--black-02);
+  box-shadow: none;
+}
+
+.mc-button .mcbtn_text::before {
+  left: -0.25rem;
+}
+
+.mc-button .mcbtn_text::after {
+  right: -0.25rem;
+}
+
+.mc-button:focus .mcbtn_text,
+.mc-button:hover .mcbtn_text {
+  background: var(--button-bg);
+}
+
+.mc-button:active .mcbtn_text {
+  box-shadow: none;
+  background: var(--button-color-02);
+}
+
+.mc-button:active {
+  box-shadow: none;
+}
+
+.mc-button:active::before {
+  content: unset;
+}
+
+.mc-button:focus .mcbtn_text:after,
+.mc-button:focus .mcbtn_text:before,
+.mc-button:hover .mcbtn_text:after,
+.mc-button:hover .mcbtn_text:before {
+  bottom: 0.05rem;
+  box-shadow: none;
+  background: var(--button-color-02);
+}
+
+.mc-button:focus .mcbtn_text:after,
+.mc-button:focus .mcbtn_text:before {
+  background: var(--button-bg);
+}
+
+.mc-button:active .mcbtn_text:after,
+.mc-button:active .mcbtn_text:before {
+  background: var(--button-color-02);
+}
+
+.mc-button:focus .mcbtn_text {
+  border-top-width: 0;
+  border-bottom-width: 0;
+}
+
+.mc-button:focus .mcbtn_text:after,
+.mc-button:focus .mcbtn_text:before {
+  bottom: 0.15rem;
+}
+
+.mc-button * {
+  text-decoration: none;
+  color: white;
+}
+
+/* When I say no text decoration I mean NO TEXT DECORATION */
