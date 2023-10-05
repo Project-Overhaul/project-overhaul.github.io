@@ -6,9 +6,6 @@
   background-color: #353535;
 }
 #theme-switcher-form div:nth-child(3) label {
-  background-color: #813151;
-}
-#theme-switcher-form div:nth-child(4) label {
   background-color: #888;
 }
 
@@ -21,22 +18,16 @@ html[data-theme="light"] {
   --text-primary: #111;
 }
 
+html[data-theme="neutral"] {
+  --bg-primary: #aaa;
+  --bg-secondary: #878787;
+  --text-primary: #363636;
+}
+
 html[data-theme="dark"] {
   --bg-primary: #111;
   --bg-secondary: #1b1b1b;
   --text-primary: #eee;
-}
-
-html[data-theme="crimson"] {
-  --bg-primary: #331320;
-  --bg-secondary: #4d1d31;
-  --text-primary: #eee;
-}
-
-html[data-theme="neutral"] {
-  --bg-primary: #aaa;
-  --bg-secondary: #777;
-  --text-primary: #444;
 }
 
 
