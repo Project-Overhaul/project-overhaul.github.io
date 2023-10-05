@@ -30,6 +30,12 @@ html[data-theme="crimson"] {
   --text-primary: #eee;
 }
 
+html[data-theme="neutral"] {
+  --bg-primary: #aaa;
+  --bg-secondary: #777;
+  --text-primary: #444;
+}
+
 
 /* crappy css below, but check the result before you murder me */
 
