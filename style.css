@@ -28,3 +28,9 @@ a {
   text-align: right;
   color: var(--text-primary);
 }
+
+
+cstm-header {
+  width: 100%;
+  height: 100%;
+}
