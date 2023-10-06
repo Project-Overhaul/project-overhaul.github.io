@@ -38,7 +38,7 @@ html[data-theme="dark"] {
   --link-color: #6091e2;
 }
 
-html[data-theme="deep blue"] {
+html[data-theme="ocean"] {
   --bg-primary: #0c0248;
   --bg-secondary: #210a80;
   --text-primary: #eee;
