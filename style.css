@@ -1,9 +1,14 @@
+@font-face {
+  font-family: 'Hexaframe CF';
+  src: url('./fonts/Hexaframe\ CF\ Thin.woff2');
+}
+
 html, body {
   margin: 0px;
   padding: 0px;
   background-color: var(--bg-primary);
   color: var(--text-primary);
-  font-family: sans-serif;
+  font-family: 'Hexaframe CF', sans-serif;
 }
 
 * {
@@ -27,6 +32,10 @@ a {
   box-sizing: border-box;
   text-align: right;
   color: var(--text-primary);
+}
+
+.credits {
+  font-family: sans-serif;
 }
 
 
