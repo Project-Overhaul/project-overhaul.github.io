@@ -49,17 +49,18 @@ html[data-theme="ocean"] {
 /* crappy css below, but check the result before you murder me */
 
 #theme-switcher-form {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 120px; /* Adjust the width as needed */
-  margin: auto; /* Center form */
+  display: inline-flex;
+  writing-mode: vertical-lr;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  height: 30px;
 }
 
 #theme-switcher-form div {
+  writing-mode: horizontal-tb;
+  width: 30px;
+  height: 30px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 #theme-switcher-form input[type="radio"] {
