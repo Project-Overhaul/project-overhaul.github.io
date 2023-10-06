@@ -39,8 +39,8 @@ html[data-theme="dark"] {
 }
 
 html[data-theme="ocean"] {
-  --bg-primary: --mc-realms-deep-blue-7;
-  --bg-secondary: --mc-realms-deep-blue-6;
+  --bg-primary: #050029;
+  --bg-secondary: #0c0248;
   --text-primary: #eee;
   --link-color: #de7523;
 }
