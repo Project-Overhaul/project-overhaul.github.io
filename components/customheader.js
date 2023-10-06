@@ -17,11 +17,8 @@ class CustomHeader extends HTMLElement {
 
       const wrapper = document.createElement('div');
       
-        wrapper.innerHTML = `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="themes.css"><div class="topnav" id="myTopnav"><a href="#home" class="active">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-  ${this.innerHTML}
+        wrapper.innerHTML = `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><link rel="stylesheet" href="themes.css"><div class="topnav" id="myTopnav">
+  <slot></slot>
   <a href="javascript:void(0);" class="icon" onclick="toggleNav()">
     <i class="fa fa-bars"></i>
   </a>
@@ -43,17 +40,22 @@ class CustomHeader extends HTMLElement {
 .topnav {
   background-color: var(--bg-secondary);
   overflow: hidden;
+  text-align: right;
 }
 
 /* Style the links inside the navigation bar */
-.topnav a {
-  float: left;
-  display: block;
-  color: var(--text-primary);
+.topnav ::slotted(a), .topnav a {
+  text-align: right;
+  display: inline-block;
+  color: var(--text-primary) !important;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+}
+
+.topnav ::slotted(a:first-child) {
+  float: left;
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -63,7 +65,7 @@ class CustomHeader extends HTMLElement {
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
 @media screen and (max-width: 600px) {
-  .topnav a:not(:first-child) {display: none;}
+  .topnav ::slotted(a:not(:first-child)) {display: none;}
   .topnav a.icon {
     float: right;
     display: block;

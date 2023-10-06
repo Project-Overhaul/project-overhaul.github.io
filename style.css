@@ -1,6 +1,7 @@
 @font-face {
   font-family: 'Hexaframe CF';
-  src: url('./fonts/Hexaframe\ CF\ Thin.woff2');
+  src: url('./fonts/Hexaframe\ CF\ Thin.woff2'), font-weight(thin);
+  src: url('./fonts/Hexaframe\ CF\ Heavy.woff2'), font-weight(heavy);
 }
 
 html, body {
@@ -9,6 +10,10 @@ html, body {
   background-color: var(--bg-primary);
   color: var(--text-primary);
   font-family: 'Hexaframe CF', sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: heavy;
 }
 
 * {
